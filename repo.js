@@ -2,7 +2,7 @@
 	"contact": "sander.j.veltman@gmail.com",
 	"id": "daiMod",
 	"patches": {
-		"RNGpatch": "Randomized bullets patch"
+		"RNGpatch": "RNG patch for IN, UFO, DDC, LoLK and HSiFS"
 	},
 	"servers": [
 		"https://raw.githubusercontent.com/Daikarasu/daiMod/master/"
