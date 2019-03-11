@@ -6,5 +6,5 @@
 	"servers": [
 		"https://raw.githubusercontent.com/Daikarasu/daiMod/master/RNGpatch/"
 	],
-	"title": "Randomized bullets patch"
+	"title": "RNG patch for IN, UFO, DDC, LoLK and HSiFS"
 }
