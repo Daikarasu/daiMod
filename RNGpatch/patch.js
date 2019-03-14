@@ -6,5 +6,5 @@
 	"servers": [
 		"https://raw.githubusercontent.com/Daikarasu/daiMod/master/RNGpatch/"
 	],
-	"title": "RNG patch for IN, UFO, TD, DDC, LoLK and HSiFS"
+	"title": "Randomized Danmaku for IN, UFO, TD, DDC, LoLK and HSiFS."
 }

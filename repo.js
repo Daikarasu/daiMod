@@ -1,8 +1,8 @@
 {
-	"contact": "sander.j.veltman@gmail.com",
-	"id": "daiMod",
+	"contact": "Daikarasu#9393",
+	"id": "Daikarasu",
 	"patches": {
-		"RNGpatch": "RNG patch for IN, UFO, TD, DDC, LoLK and HSiFS"
+		"RNGpatch": "Randomized Danmaku for IN, UFO, TD, DDC, LoLK and HSiFS."
 	},
 	"servers": [
 		"https://raw.githubusercontent.com/Daikarasu/daiMod/master/"
