@@ -1,5 +1,5 @@
 {
-	"contact": "sander.j.veltman@gmail.com",
+	"contact": "@#Daicrow#9393",
 	"id": "daiMod",
 	"patches": {
 		"RNGpatch": "RNG patch for IN, UFO, TD, DDC, LoLK and HSiFS"
