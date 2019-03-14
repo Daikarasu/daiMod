@@ -26,7 +26,7 @@
 	"th08/ecldata_yy.ecl": 2564485239,
 	"th10/default.ecl": 1763484394,
 	"th10/stage01.ecl": 1599044102,
-	"th10/stage02.ecl": 4016787698,
+	"th10/stage02.ecl": 2722404075,
 	"th10/stage03.ecl": 3090340831,
 	"th10/stage04.ecl": 3454876548,
 	"th10/stage05.ecl": 275004647,
