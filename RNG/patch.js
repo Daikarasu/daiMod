@@ -6,5 +6,5 @@
 	"servers": [
 		"https://raw.githubusercontent.com/Daikarasu/daiMod/master/RNG/"
 	],
-	"title": "Randomized Danmaku for IN, MoF, SA, UFO, TD, DDC, LoLK and HSiFS."
+	"title": "Randomized Danmaku for th08 to th16 (excluding 9, 9.5, 12.8 and 14.3)"
 }

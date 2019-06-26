@@ -2,7 +2,7 @@
 	"contact": "Daikarasu#9393",
 	"id": "Daikarasu",
 	"patches": {
-		"RNG": "Randomized Danmaku for IN, MoF, SA, UFO, TD, DDC, LoLK and HSiFS.",
+		"RNG": "Randomized Danmaku for th08 to th16 (excluding 9, 9.5, 12.8 and 14.3)",
 		"le_sanae": "Replaces every single texture in LoLK to LE SANAE. Viewer discretion is advised. (April Fools 2019)"
 	},
 	"servers": [
