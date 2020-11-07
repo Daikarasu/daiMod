@@ -29,6 +29,7 @@
 	"th14/st07.ecl": 1857441856,
 	"th14/st07bs.ecl": 767897217,
 	"th14/st07mbs.ecl": 2169422702,
+	"th14/testfiledontmindme.ecl": 1574345775,
 	"th15/default.ecl": 1130697626,
 	"th15/enemy.anm": 274813204,
 	"th15/st01.ecl": 3409543825,
