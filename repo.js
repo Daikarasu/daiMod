@@ -4,7 +4,7 @@
 	"patches": {
 		"RNG": "(v2.0) (th08, 10, 11, 12, 12.5, 13, 14, 15, 16, 17) Makes every attack purely RNG.",
 		"RNG-Legacy": "Old version of the RNG Patch. Use this to view replays made with this version.",
-		"RandomAttack": "(th15) Randomizes which attack gets fired every time. Chaos ensues.",
+		"RandomAttack": "(th14, th15) Randomizes which attack gets fired every time. Chaos ensues.",
 		"le_sanae": "Replaces every single texture in LoLK to LE SANAE. Viewer discretion is advised. (April Fools 2019)"
 	},
 	"servers": [
