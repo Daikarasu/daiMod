@@ -1,7 +1,7 @@
 {
 	"patch.js": 451016283,
 	"stringdefs.js": 1772181696,
-	"th14.js": 3405142147,
+	"th14.js": 2188754009,
 	"th14/default.ecl": 2835370547,
 	"th14/effect.anm": 635197761,
 	"th14/enemy.anm": 3110255252,
