@@ -7,5 +7,5 @@
 		"https://mirrors.thpatch.net/Daikarasu/RNG/",
 		"https://raw.githubusercontent.com/Daikarasu/daiMod/master/RNG/"
 	],
-	"title": "(v2.0) (th08, 10, 11, 12, 12.5, 13, 14, 15, 16, 17) Makes every attack purely RNG."
+	"title": "(th08, 10, 11, 12, 12.5, 13, 14, 15, 16, 17)\n\tMakes every attack purely RNG. (v2.0)"
 }
