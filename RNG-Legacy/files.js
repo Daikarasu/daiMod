@@ -1,5 +1,6 @@
 {
 	"patch.js": 801520102,
+	"stringdefs.js": 894285940,
 	"th08/ecldata1.ecl": 3351274248,
 	"th08/ecldata1sp.ecl": 3915455798,
 	"th08/ecldata2.ecl": 2748384837,
