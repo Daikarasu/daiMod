@@ -96,6 +96,11 @@
 			"expected": "C740 08 20824800",
 			"code": "C740 08 <codecave:Dai.anm-manager.on-tick-world-freeze>",
 		},
+		"Dai.ability-manager.replace-on-tick": {
+			"addr": 0x408469,
+			"expected": "68 908A4000",
+			"code": "68 <codecave:Dai.ability-manager.on-tick-freeze>",
+		},
 		
 		//reset the freeze values when the game thread or the main menu thread initializes
 		"Dai.gamethread-start.reset-freeze-values.jump-to-cave": {
@@ -201,6 +206,10 @@
 		"Dai.anm-manager.on-tick-world-freeze": {
 			"access": "re",
 			"code": "833D <codecave:Dai.global.freeze> 00 0F84 [0x488220] B8 01000000 C3"
+		},
+		"Dai.ability-manager.on-tick-freeze": {
+			"access": "re",
+			"code": "833D <codecave:Dai.global.freeze> 00 0F84 [0x408A90] B8 01000000 C3"
 		},
 		
 		//reset freeze values and jump to GameThread::thread_start
