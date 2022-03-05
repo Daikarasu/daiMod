@@ -7,6 +7,7 @@
 		"RandomAttack": "(th14, 15) Randomizes which attack gets fired every time. Chaos ensues.\n    WARNING: th14 currently has unsolved random crashing for some users.",
 		"kill_cam": "(th18)\n    Adds a TF2-styled kill cam to the game, which zooms in to the enemy that killed you (if it is still alive).\n    Fully compatible with vanilla replays!",
 		"le_sanae": "(th15) Replaces almost every single texture to LE SANAE. Viewer discretion is advised.",
+		"puny_remilia": "(th08) Makes Remilia's shottype absolutely awful. (Gastari wanted this)",
 		"th18-disable-always-on-top": "Disables Always-On-Top window behavior for Touhou 18"
 	},
 	"servers": [
