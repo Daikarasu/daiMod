@@ -1,6 +1,23 @@
 {
-	"patch.js": 1658455676,
-	"th18.v1.00a.js": 1718002517,
+	"patch.js": 3756570957,
+	"th14.v1.00b.js": 1608653975,
+	"th14/se_extend2.wav": 2491123837,
+	"th14/se_pin01.wav": 928469526,
+	"th14/text.anm": 1592635757,
+	"th15.v1.00b.js": 3315669473,
+	"th15/se_extend2.wav": 2491123837,
+	"th15/se_pin01.wav": 928469526,
+	"th15/text.anm": 1390401139,
+	"th16.v1.00a.js": 3975225872,
+	"th16/se_extend2.wav": 2491123837,
+	"th16/se_pin01.wav": 928469526,
+	"th16/text.anm": 133519625,
+	"th17.v1.00b.js": 2655329684,
+	"th17/se_extend2.wav": 2491123837,
+	"th17/se_pin01.wav": 928469526,
+	"th17/text.anm": 133519625,
+	"th18.v1.00a.js": 4120039844,
 	"th18/se_extend2.wav": 2491123837,
-	"th18/text.anm": 3977346111
+	"th18/se_pin01.wav": 928469526,
+	"th18/text.anm": 4128675389
 }
