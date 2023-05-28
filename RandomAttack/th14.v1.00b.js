@@ -1,108 +1,170 @@
 {
-    //Pointdevice binhacks by Priw8 (thank you!)
     "binhacks": {
-        "Priw8.th14pointdevice_binhack_4252DA": {
+        "Dai.RandomAttack.th14.pointdevice.jmp_to_custom_ins_cave": {
             "addr": 0x4252DA,
             "expected": "0F87 [0x429C28]",
-            "code": "0F87 [codecave:Priw8.th14pointdevice_customInsHandler]"
+            "code": "0F87 [codecave:Dai.RandomAttack.th14.pointdevice.custom_ins]"
         },
-        "Priw8.th14pointdevice_binhack_44DD91": {
+        "Dai.RandomAttack.th14.pointdevice.replace_on_player_death_func": {
             "addr": 0x44DD91,
             "expected": "E8 [0x44F5E0]",
-            "code": "E9 [codecave:Priw8.th14pointdevice_playerDeadHook]"
+            "code": "E8 [codecave:Dai.RandomAttack.th14.pointdevice.on_player_death]"
         },
-        "Priw8.th14pointdevice_binhack_439844": {
+        "Dai.RandomAttack.th14.pointdevice.check_snapshot_status.jmp": {
+            "addr": 0x436D18,
+            "expected": "5F 5E B8 01000000 5B 8BE5 5D C3 <int3:5>",
+            "code": "E9 [codecave:Dai.RandomAttack.th14.pointdevice.check_snapshot_status] 5F 5E B8 01000000 5B 8BE5 5D C3",
+        },
+        "Dai.RandomAttack.th14.pointdevice.dont_display_spell_failed_popups_if_reload.jmp": {
+            "addr": 0x41D4B3,
+            "expected": "0F84 CB000000",
+            "code": "0F84 [codecave:Dai.RandomAttack.th14.pointdevice.dont_display_spell_failed_popups_if_reload]"
+        },
+        
+        "Dai.RandomAttack.th14.freeze_item_cycle": {
             "addr": 0x439844,
             "expected": "8B1D 94584F00 43",
             "code": "BB 01000000 <nop:2>"
         },
-        "Priw8.th14pointdevice_binhack_4397BB": {
+        "Dai.RandomAttack.th14.replace_life_piece.jmp": {
             "addr": 0x4397BB,
             "expected": "8B5D 08 56 57",
-            "code": "E9 [codecave:Priw8.th14pointdevice_replaceLifePiece]"
+            "code": "E9 [codecave:Dai.RandomAttack.th14.replace_life_piece]"
+        },
+        "Dai.RandomAttack.th14.fix_anm_effect_7_memory_leak": {
+            "addr": 0x408523,
+            "expected": "EB 0B 8360 18 FE C740 28 00000000 83C6 04 4F 75 DE 5F 5E 33C0 5B C3 <int3:1>",
+            "code": "EB 0C 8360 18 FE 8360 1C DF 8348 1C 20 83C6 04 4F 75 DD 5F 5E 31C0 5B C3"
         },
         
-        "Dai.anm.effect.7.on_destroy.properly_clean_up_vms": {
-            "addr": 0x408523,
-            "expected": "EB 0E 83A0 34050000 FE C740 2C FFFFFFFF 83C6 04 83EF 01 75 D9 5F 5E 33C0 5B C3 <int3:1>",
-            "code": "EB 0C 8360 18 FE 8360 1C DF 8348 1C 20 83C6 04 4F 75 DD 5F 5E 31C0 5B C3 <int3:5>"
+        "Dai.RandomAttack.th14.unlock_extra": {
+            "addr": 0x459220,
+            "expected": "55 8BEC 51",
+            "code": "31C0 40 C3"
         },
     },
     "codecaves": {
-        "Priw8.th14pointdevice_itemMgrCopyPtr": {
+        "Dai.RandomAttack.th14.pointdevice.enemy_ptr": {
             "access": "rw",
             "size": 4,
         },
-        "Priw8.th14pointdevice_bulletMgrCopyPtr": {
+        "Dai.RandomAttack.th14.pointdevice.enemy_snapshot": {
             "access": "rw",
-            "size": 4,
+            "size": 0x530C,
         },
-        "Priw8.th14pointdevice_bgCopyPtr": {
+        "Dai.RandomAttack.th14.pointdevice.player_snapshot": {
             "access": "rw",
-            "size": 4,
+            "size": 0x184c0, 
         },
-        "Priw8.th14pointdevice_playerPosCopy": {
+        "Dai.RandomAttack.th14.pointdevice.item_manager_snapshot": {
             "access": "rw",
-            "size": 8,
+            "size": 0xDDD888,
         },
-        "Priw8.th14pointdevice_enemyPtr":  {
+        "Dai.RandomAttack.th14.pointdevice.bullet_manager_snapshot": {
             "access": "rw",
-            "size": 4,
+            "size": 0x9BF6D0,
         },
-        "Priw8.th14pointdevice_enemyCopyPtr":  {
+        "Dai.RandomAttack.th14.pointdevice.stage_background_snapshot": {
             "access": "rw",
-            "size": 4,
+            "size": 0x43a0,
         },
-        "Priw8.th14pointdevice_gameStateStructCopyPtr":  {
+        "Dai.RandomAttack.th14.pointdevice.globals_snapshot": {
             "access": "rw",
-            "size": 4,
+            "size": 0x70, 
         },
-        "Priw8.th14pointdevice_memcpy4": {
-            "access": "re",
-            "code": "c1 e9 02 F3 A5 c3",
-        },
-        "Priw8.th14pointdevice_cpyGameState": {
-            "access": "re",
-            "code": "83 c7 08 83 c6 08 8b 06 89 07 83 c7 10 83 c6 10 8b 06 89 07 83 c7 0c 83 c6 0c 8b 06 89 07 83 c7 0c 83 c6 0c 8b 06 89 07 83 c7 0c 83 c6 0c 8b 06 89 07 83 c7 04 83 c6 04 8b 06 89 07 83 c7 08 83 c6 08 8b 06 89 07 83 c7 04 83 c6 04 8b 06 89 07 83 c7 24 83 c6 24 8b 06 89 07 c3",
-        },
-        "Priw8.th14pointdevice_allocIfNull": {
-            "access": "re",
-            "code": "8b 4c 24 04 8b 01 85 c0 0f 85 14 00 00 00 ff 74 24 08 b8 af 54 48 00 ff d0 83 c4 04 8b 4c 24 04 89 01 c2 08 00",
-        },
-        /*
-        //old version
-        "Priw8.th14pointdevice_customInsHandler": {
-            "access": "re",
-            "code": "3d a4 06 00 00 0f 84 07 00 00 00 b8 28 9c 42 00 ff e0 60 e8 08 00 00 00 61 b8 28 9c 42 00 ff e0 89 fe bf <codecave:Priw8.th14pointdevice_enemyPtr> 89 37 bf <codecave:Priw8.th14pointdevice_enemyCopyPtr> 68 0c 53 00 00 57 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 89 c7 8b b6 ec 40 00 00 83 c6 04 b9 10 13 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 81 c7 54 01 00 00 81 c6 54 01 00 00 b9 70 00 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 83 c7 10 83 c6 10 b9 24 3e 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] bf <codecave:Priw8.th14pointdevice_enemyCopyPtr> 8b 3f 83 47 08 10 bf <codecave:Priw8.th14pointdevice_playerPosCopy> 8b 35 7c b6 4d 00 8d 86 ec 05 00 00 8b 18 89 1f 8b 58 04 89 5f 04 b8 <codecave:Priw8.th14pointdevice_itemMgrCopyPtr> 68 88 d8 dd 00 50 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 8b 35 60 b6 4d 00 89 c7 b9 88 d8 dd 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] b8 <codecave:Priw8.th14pointdevice_bulletMgrCopyPtr> 68 d0 f6 9b 00 50 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 8b 35 30 b5 4d 00 89 c7 b9 d0 f6 9b 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] b8 <codecave:Priw8.th14pointdevice_gameStateStructCopyPtr> 68 b0 02 00 00 50 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 89 c7 be 28 58 4f 00 e8 [codecave:Priw8.th14pointdevice_cpyGameState] b8 <codecave:Priw8.th14pointdevice_bgCopyPtr> 68 a0 43 00 00 50 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 89 c7 8b 35 28 b5 4d 00 b9 a0 43 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] c3",
-        },
-        "Priw8.th14pointdevice_playerDeadHook": {
-            "access": "re",
-            "code": "60 e8 08 00 00 00 61 b8 d1 df 44 00 ff e0 89 fe a1 44 b5 4d 00 8b 80 d0 00 00 00 85 c0 0f 84 24 00 00 00 8b 18 f7 83 44 52 00 00 00 20 00 00 0f 85 0a 00 00 00 81 8b 44 52 00 00 00 00 00 02 8b 40 04 e9 d4 ff ff ff 6a 00 6a 01 b8 00 ac 43 00 ff d0 b8 50 d4 41 00 ff d0 c7 86 84 06 00 00 01 00 00 00 bf <codecave:Priw8.th14pointdevice_playerPosCopy> 8d 86 ec 05 00 00 8b 1f 89 18 8b 5f 04 89 58 04 8d 8e c0 82 01 00 6a 3c b8 00 8b 40 00 ff d0 b8 <codecave:Priw8.th14pointdevice_enemyPtr> 8b 00 8b 80 ec 40 00 00 83 c0 08 8b 88 14 10 00 00 b8 b0 45 48 00 ff d0 be <codecave:Priw8.th14pointdevice_enemyCopyPtr> 8b 36 b8 <codecave:Priw8.th14pointdevice_enemyPtr> 8b 00 8b b8 ec 40 00 00 83 c7 04 b9 10 13 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 81 c7 54 01 00 00 81 c6 54 01 00 00 b9 70 00 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 83 c6 10 83 c7 10 b9 24 3e 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] be <codecave:Priw8.th14pointdevice_itemMgrCopyPtr> 8b 36 8b 3d 60 b6 4d 00 b9 88 d8 dd 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] be <codecave:Priw8.th14pointdevice_bulletMgrCopyPtr> 8b 36 8b 3d 30 b5 4d 00 b9 d0 f6 9b 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] bf 28 58 4f 00 be <codecave:Priw8.th14pointdevice_gameStateStructCopyPtr> 8b 36 e8 [codecave:Priw8.th14pointdevice_cpyGameState] be <codecave:Priw8.th14pointdevice_bgCopyPtr> 8b 36 8b 3d 28 b5 4d 00 b9 a0 43 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 8b 0d 7c b6 4d 00 b8 70 f9 44 00 ff d0 8b 0d 50 b5 4d 00 a1 74 58 4f 00 50 a1 70 58 4f 00 50 b8 d0 4f 43 00 ff d0 b8 b0 fc 47 00 ff d0 89 c6 8b 0d 3c b5 4d 00 8b 49 10 68 c4 00 00 00 56 b8 70 fd 47 00 ff d0 31 c0 89 46 3c 89 46 40 89 46 44 89 86 9c 05 00 00 89 86 a0 05 00 00 89 86 a4 05 00 00 56 54 b8 90 e8 47 00 ff d0 c3",
-        },
-        */
-        "Priw8.th14pointdevice_customInsHandler": {
-            "access": "re",
-            "code": "3d a4 06 00 00 0f 84 07 00 00 00 b8 28 9c 42 00 ff e0 60 e8 08 00 00 00 61 b8 28 9c 42 00 ff e0 8B8F EC400000 E8 [codecave:Dai.th14pointdevice_eclFreeAsyncContextList] 89 fe bf <codecave:Priw8.th14pointdevice_enemyPtr> 89 37 bf <codecave:Priw8.th14pointdevice_enemyCopyPtr> 68 0c 53 00 00 57 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 89 c7 8b b6 ec 40 00 00 83 c6 04 b9 10 13 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 81 c7 54 01 00 00 81 c6 54 01 00 00 b9 70 00 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 83 c7 10 83 c6 10 b9 24 3e 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] bf <codecave:Priw8.th14pointdevice_enemyCopyPtr> 8b 3f 83 47 08 10 bf <codecave:Priw8.th14pointdevice_playerPosCopy> 8b 35 7c b6 4d 00 8d 86 ec 05 00 00 8b 18 89 1f 8b 58 04 89 5f 04 b8 <codecave:Priw8.th14pointdevice_itemMgrCopyPtr> 68 88 d8 dd 00 50 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 8b 35 60 b6 4d 00 89 c7 b9 88 d8 dd 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] b8 <codecave:Priw8.th14pointdevice_bulletMgrCopyPtr> 68 d0 f6 9b 00 50 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 8b 35 30 b5 4d 00 89 c7 b9 d0 f6 9b 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] b8 <codecave:Priw8.th14pointdevice_gameStateStructCopyPtr> 68 b0 02 00 00 50 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 89 c7 be 28 58 4f 00 e8 [codecave:Priw8.th14pointdevice_cpyGameState] b8 <codecave:Priw8.th14pointdevice_bgCopyPtr> 68 a0 43 00 00 50 e8 [codecave:Priw8.th14pointdevice_allocIfNull] 89 c7 8b 35 28 b5 4d 00 b9 a0 43 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] c3",
-        },
-        "Priw8.th14pointdevice_playerDeadHook": {
-            "access": "re",
-            "code": "60 e8 08 00 00 00 61 b8 d1 df 44 00 ff e0 89 fe a1 44 b5 4d 00 8b 80 d0 00 00 00 85 c0 0f 84 24 00 00 00 8b 18 f7 83 44 52 00 00 00 20 00 00 0f 85 0a 00 00 00 81 8b 44 52 00 00 00 00 00 02 8b 40 04 e9 d4 ff ff ff 6a 00 6a 01 b8 00 ac 43 00 ff d0 b8 50 d4 41 00 ff d0 c7 86 84 06 00 00 01 00 00 00 bf <codecave:Priw8.th14pointdevice_playerPosCopy> 8d 86 ec 05 00 00 8b 1f 89 18 8b 5f 04 89 58 04 8d 8e c0 82 01 00 6a 3c b8 00 8b 40 00 ff d0   A1 <codecave:Priw8.th14pointdevice_enemyPtr> 8B88 EC400000 E8 [codecave:Dai.th14pointdevice_eclFreeAsyncContextList] be <codecave:Priw8.th14pointdevice_enemyCopyPtr> 8b 36 b8 <codecave:Priw8.th14pointdevice_enemyPtr> 8b 00 8b b8 ec 40 00 00 83 c7 04 b9 10 13 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 81 c7 54 01 00 00 81 c6 54 01 00 00 b9 70 00 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 83 c6 10 83 c7 10 b9 24 3e 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] be <codecave:Priw8.th14pointdevice_itemMgrCopyPtr> 8b 36 8b 3d 60 b6 4d 00 b9 88 d8 dd 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] be <codecave:Priw8.th14pointdevice_bulletMgrCopyPtr> 8b 36 8b 3d 30 b5 4d 00 b9 d0 f6 9b 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] bf 28 58 4f 00 be <codecave:Priw8.th14pointdevice_gameStateStructCopyPtr> 8b 36 e8 [codecave:Priw8.th14pointdevice_cpyGameState] be <codecave:Priw8.th14pointdevice_bgCopyPtr> 8b 36 8b 3d 28 b5 4d 00 b9 a0 43 00 00 e8 [codecave:Priw8.th14pointdevice_memcpy4] 8b 0d 7c b6 4d 00 b8 70 f9 44 00 ff d0 8b 0d 50 b5 4d 00 a1 74 58 4f 00 50 a1 70 58 4f 00 50 b8 d0 4f 43 00 ff d0 83EC 04 8D04E4 51 6A FF 8B0D 3CB54D00 8B49 10 68 C4000000 50 E8 [0x42DF70] 83C4 04 C3",
+        "Dai.RandomAttack.th14.pointdevice.game_speed_snapshot": {
+            "access": "rw",
+            "size": 4, 
         },
         
-        "Priw8.th14pointdevice_replaceLifePiece": {
-            "access": "re",
-            "code": "8b 5d 08 56 57 83 fb 04 0f 85 ac 00 00 00 bb <codecave:Priw8.th14pointdevice_FLOAT_32> 83 ec 08 89 e7 8b 75 0c f3 0f 10 06 f3 0f 58 03 f3 0f 11 07 f3 0f 10 46 04 f3 0f 11 47 04 6a 00 83 ec 0c c7 44 24 08 cd cc 0c 40 c7 44 24 04 db 0f c9 bf 57 6a 06 b8 b0 97 43 00 ff d0 f3 0f 10 06 f3 0f 5c 03 f3 0f 11 07 6a 00 83 ec 0c c7 44 24 08 cd cc 0c 40 c7 44 24 04 db 0f c9 bf 57 6a 06 b8 b0 97 43 00 ff d0 f3 0f 10 06 f3 0f 11 07 f3 0f 10 46 04 f3 0f 5c 03 f3 0f 11 47 04 6a 00 83 ec 0c c7 44 24 08 cd cc 0c 40 c7 44 24 04 db 0f c9 bf 57 6a 06 b8 b0 97 43 00 ff d0 83 c4 08 b8 5a 99 43 00 ff e0 b8 c0 97 43 00 ff e0",
-        },
-        "Priw8.th14pointdevice_FLOAT_32": {
-            "access": "r",
-            "code": "+32.0f",
+        "Dai.RandomAttack.th14.pointdevice.snapshot_status": {
+            "access": "rw",
+            "size": 4, 
+            //0 = no action, 1 = create snapshot, 2 = load snapshot
         },
         
-        "Dai.th14pointdevice_eclFreeAsyncContextList": {
+        "Dai.RandomAttack.th14.pointdevice.custom_ins": {
+            //ins 2000 createSnapshot() - Save pointer to caller enemy, queue snapshot creation
+            "access": "re",
+            "code": "3D A4060000 0F85 [0x429C28] 8B8F EC400000 890D <codecave:Dai.RandomAttack.th14.pointdevice.enemy_ptr> C705 <codecave:Dai.RandomAttack.th14.pointdevice.snapshot_status> 01000000 E9 [0x429C28]",
+        },
+        "Dai.RandomAttack.th14.pointdevice.on_player_death": {
+            //unkill player, give 60 iframes to player, create reload screen effect, queue snapshot reload
+            "access": "re",
+            "code": "C781 84060000 01000000 6A 3C 8D89 C0820100 E8 [0x408B00] 83EC 04 8D04E4 51 6A FF 8B0D <0x4DB53C> 68 C4000000 8B49 10 50 E8 [0x42DF70] 83C4 04 C705 <codecave:Dai.RandomAttack.th14.pointdevice.snapshot_status> 02000000 C3",
+        },
+        
+        "Dai.RandomAttack.th14.pointdevice.check_snapshot_status": {
+            "access": "re",
+            "code": "A1 <codecave:Dai.RandomAttack.th14.pointdevice.snapshot_status> 83F8 00 0F84 [0x436D1D] 83F8 01 75 07 E8 [codecave:Dai.RandomAttack.th14.pointdevice.create_snapshot] EB 0C 83F8 02 75 07 E8 [codecave:Dai.RandomAttack.th14.pointdevice.load_snapshot] <nop:2> C705 <codecave:Dai.RandomAttack.th14.pointdevice.snapshot_status> 00000000 E9 [0x436D1D]",
+        },
+        "Dai.RandomAttack.th14.pointdevice.create_snapshot": {
+            "access": "re",
+            "code": "56 57 8B35 <codecave:Dai.RandomAttack.th14.pointdevice.enemy_ptr> 89F1 E8 [codecave:Dai.RandomAttack.th14.pointdevice.ecl_free_async_context_list] 56 68 <codecave:Dai.RandomAttack.th14.pointdevice.enemy_snapshot> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_enemy] FF35 <0x4DB67C> 68 <codecave:Dai.RandomAttack.th14.pointdevice.player_snapshot> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_player] FF35 <0x4DB660> 68 <codecave:Dai.RandomAttack.th14.pointdevice.item_manager_snapshot> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_item_manager] FF35 <0x4DB530> 68 <codecave:Dai.RandomAttack.th14.pointdevice.bullet_manager_snapshot> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_bullet_manager] FF35 <0x4DB528> 68 <codecave:Dai.RandomAttack.th14.pointdevice.stage_background_snapshot> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_stage_background] 68 <0x4F5828> 68 <codecave:Dai.RandomAttack.th14.pointdevice.globals_snapshot> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_globals] A1 <0x4D8F58> A3 <codecave:Dai.RandomAttack.th14.pointdevice.game_speed_snapshot> 5F 5E C3",
+        },
+        "Dai.RandomAttack.th14.pointdevice.load_snapshot": {
+            "access": "re",
+            "code": "56 57 53 8B35 <codecave:Dai.RandomAttack.th14.pointdevice.enemy_ptr> A1 <0x4DB544> 8BB8 D0000000 85FF 74 24 8B0F 8B5F 04 85C9 74 17 39F1 74 13 F781 44520000 00200000 75 07 8B01 6A 01 FF50 14 89DF EB D8 6A 00 6A 01 E8 [0x43AC00] E8 [0x41D450] 68 <codecave:Dai.RandomAttack.th14.pointdevice.enemy_snapshot> 56 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_enemy] 68 <codecave:Dai.RandomAttack.th14.pointdevice.player_snapshot> FF35 <0x4DB67C> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_player] 68 <codecave:Dai.RandomAttack.th14.pointdevice.item_manager_snapshot> FF35 <0x4DB660> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_item_manager] 68 <codecave:Dai.RandomAttack.th14.pointdevice.bullet_manager_snapshot> FF35 <0x4DB530> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_bullet_manager] 68 <codecave:Dai.RandomAttack.th14.pointdevice.stage_background_snapshot> FF35 <0x4DB528> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_stage_background] 68 <codecave:Dai.RandomAttack.th14.pointdevice.globals_snapshot> 68 <0x4F5828> E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_globals] 8B0D <0x4DB67C> E8 [0x44F970] 8B0D <0x4DB550> FF35 <0x4F5874> FF35 <0x4F5870> E8 [0x434FD0] 5B 5F 5E C3",
+        },
+        
+        "Dai.RandomAttack.th14.pointdevice.copy_struct_part": {
+            //arg1 = target, arg2 = source, arg3 = start offset (inclusive), arg4 = end offset (exclusive)
+            "access": "re",
+            "code": "55 89E5 8B45 10 8B4D 14 29C1 51 8B4D 0C 01C1 51 8B4D 08 01C1 51 E8 [0x487620] 83C4 0C 89EC 5D C2 1000"
+        },
+        "Dai.RandomAttack.th14.pointdevice.copy_enemy": {
+            //arg1 = target, arg2 = source
+            "access": "re",
+            "code": "55 89E5 56 57 8B75 0C 8B7D 08  68 CC110000 6A 04 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part] 68 14130000 68 D0110000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part] 68 58140000 68 54140000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part] 68 6C140000 68 68140000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part] 68 D8140000 68 70140000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part] 68 4C520000 68 E8140000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part] 68 DC520000 68 54520000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part] 68 0C530000 68 F8520000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part]  5F 5E 89EC 5D C2 0800"
+        },
+        "Dai.RandomAttack.th14.pointdevice.copy_player": {
+            //arg1 = target, arg2 = source
+            "access": "re",
+            "code": "55 89E5 56 57 8B75 0C 8B7D 08  68 F4050000 68 E0050000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part]  5F 5E 89EC 5D C2 0800"
+        },
+        "Dai.RandomAttack.th14.pointdevice.copy_item_manager": {
+            //arg1 = target, arg2 = source
+            "access": "re",
+            "code": "55 89E5 56 57 8B75 0C 8B7D 08  68 88D8DD00 6A 10 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part]  5F 5E 89EC 5D C2 0800"
+        },
+        "Dai.RandomAttack.th14.pointdevice.copy_bullet_manager": {
+            //arg1 = target, arg2 = source
+            "access": "re",
+            "code": "55 89E5 56 57 8B75 0C 8B7D 08  68 CCF69B00 6A 10 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part]  5F 5E 89EC 5D C2 0800"
+        },
+        "Dai.RandomAttack.th14.pointdevice.copy_stage_background": {
+            //arg1 = target, arg2 = source
+            "access": "re",
+            "code": "55 89E5 56 57 8B75 0C 8B7D 08  68 04020000 6A 20 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part] 68 90300000 68 0C020000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part] 68 A0430000 68 74420000 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part]  5F 5E 89EC 5D C2 0800"
+        },
+        "Dai.RandomAttack.th14.pointdevice.copy_globals": {
+            //arg1 = target, arg2 = source
+            "access": "re",
+            "code": "55 89E5 56 57 8B75 0C 8B7D 08  6A 70 6A 00 56 57 E8 [codecave:Dai.RandomAttack.th14.pointdevice.copy_struct_part]  5F 5E 89EC 5D C2 0800"
+        },
+        
+        "Dai.RandomAttack.th14.pointdevice.ecl_free_async_context_list": {
             "access": "re",
             "code": "53 57 56 89CB 8BB3 D4110000 85F6 74 1D <nop:1> 8B7E 04 FF36 E8 [0x4854FE] 83C4 04 56 E8 [0x4854FE] 83C4 04 89FE 85FF 75 E4 31C0 8983 D4110000 8983 D8110000 8983 DC110000 5E 5F 5B C3"
         },
         
-        "protection": "0x40"
+        "Dai.RandomAttack.th14.pointdevice.dont_display_spell_failed_popups_if_reload": {
+            "access": "re",
+            "code": "833D <codecave:Dai.RandomAttack.th14.pointdevice.snapshot_status> 02 0F84 [0x41D5A1] E9 [0x41D584]",
+        },
+        
+        "Dai.RandomAttack.th14.replace_life_piece": {
+            "access": "re",
+            "code": "8B5D 08 56 57 83FB 04 0F85 [0x4397C0] 83EC 08 89E7 8B75 0C F30F1006 F30F5805 <codecave:Dai.RandomAttack.th14.float.24> F30F1107 F30F1046 04 F30F1147 04 6A 00 83EC 0C C74424 08 CDCC0C40 C74424 04 DB0FC9BF 57 6A 06 E8 [0x4397B0] F30F1006 F30F5C05 <codecave:Dai.RandomAttack.th14.float.24> F30F1107 6A 00 83EC 0C C74424 08 CDCC0C40 C74424 04 DB0FC9BF 57 6A 06 E8 [0x4397B0] F30F1006 F30F1107 F30F1046 04 F30F5C05 <codecave:Dai.RandomAttack.th14.float.32> F30F1147 04 6A 00 83EC 0C C74424 08 CDCC0C40 C74424 04 DB0FC9BF 57 6A 06 E8 [0x4397B0] 83C4 08 E9 [0x43995A]",
+        },
+        "Dai.RandomAttack.th14.float.24": {
+            "access": "r",
+            "code": "+24.0f",
+        },
+        "Dai.RandomAttack.th14.float.32": {
+            "access": "r",
+            "code": "+32.0f",
+        },
+        
     }
 }
