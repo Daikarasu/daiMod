@@ -2,7 +2,7 @@
 	"contact": "Dai#9393",
 	"id": "Daikarasu",
 	"patches": {
-		"32bit_RNG": "Replaces the vanilla 16-bit RNG with new 32-bit RNG. Not compatible with vanilla replays and vice-versa for obvious reasons.\nCurrently supports: th14, th15, th16, th16.5, th17, th18, th18.5",
+		"32bit_RNG": "Replaces the vanilla 16-bit RNG with new 32-bit RNG. Not compatible with vanilla replays and vice-versa for obvious reasons.\n    Currently supports: th14, th15, th16, th16.5, th17, th18, th18.5",
 		"RNG": "(th08, 10, 11, 12, 12.5, 13, 14, 15, 16, 17, 18)\n    Makes every attack purely RNG. (v2.0)",
 		"RNG-Legacy": "Old version of the RNG Patch. Use this to view replays made with this version.",
 		"RandomAttack": "(th14, 15) Randomizes which attack gets fired every time. Chaos ensues.\n    WARNING: th14 currently has unsolved random crashing for some users.",
