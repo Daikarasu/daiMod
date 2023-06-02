@@ -1,5 +1,6 @@
 {
     "options": {
+        
         "bullet-cap.bullet-cap": {
             "type": "i32",
             "val": 10000
@@ -126,7 +127,7 @@
         "Dai.RandomAttack.th14.pointdevice.custom_ecl_ins": {
             //ins 2000 createSnapshot() - Save pointer to caller enemy, queue snapshot creation
             "access": "re",
-            "code": "3D A4060000 0F85 [0x429C28] 8B8F EC400000 890D <codecave:Dai.RandomAttack.th14.pointdevice.enemy_ptr> C705 <codecave:Dai.RandomAttack.th14.pointdevice.snapshot_status> 01000000 8B0D <0x4DB67C> 6A 1E 8D89 C0820100 E8 [0x408B00] E9 [0x429C28]",
+            "code": "3D A4060000 0F85 [0x429C28] 8B8F EC400000 890D <codecave:Dai.RandomAttack.th14.pointdevice.enemy_ptr> C705 <codecave:Dai.RandomAttack.th14.pointdevice.snapshot_status> 01000000 8B35 <0x4DB67C> 83BE 84060000 04 75 07 89F1 E8 [0x44F900] 6A 1E 8D8E C0820100 E8 [0x408B00] E9 [0x429C28]",
         },
         "Dai.RandomAttack.th14.pointdevice.on_player_death": {
             //unkill player, give 60 iframes to player, create reload screen effect, queue snapshot reload
