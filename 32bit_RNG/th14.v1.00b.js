@@ -193,7 +193,7 @@
         "Dai.RNG32.rand_word.replace_inlined.0a": {
             "addr": 0x409568,
             "expected": "8A15 15584F00 84D2 74 13 68 C0574F00",
-            "code": "B9 <option:Dai.RNG32.addr.replay_unsafe_rng> E8 [codecave:Dai.RNG32.rand_dword] EB 59 <nop:3>"
+            "code": "B9 <option:Dai.RNG32.addr.replay_safe_rng> E8 [codecave:Dai.RNG32.rand_dword] EB 59 <nop:3>"
         },
         "Dai.RNG32.rand_word.replace_inlined.0b": {
             "addr": 0x4095CD,
@@ -203,7 +203,7 @@
         "Dai.RNG32.rand_word.replace_inlined.1a": {
             "addr": 0x4095E1,
             "expected": "8A15 15584F00 84D2 74 13 68 C0574F00",
-            "code": "B9 <option:Dai.RNG32.addr.replay_unsafe_rng> E8 [codecave:Dai.RNG32.rand_dword] EB 59 <nop:3>"
+            "code": "B9 <option:Dai.RNG32.addr.replay_safe_rng> E8 [codecave:Dai.RNG32.rand_dword] EB 59 <nop:3>"
         },
         "Dai.RNG32.rand_word.replace_inlined.1b": {
             "addr": 0x409646,
@@ -213,7 +213,7 @@
         "Dai.RNG32.rand_word.replace_inlined.2a": {
             "addr": 0x40965A,
             "expected": "8A15 15584F00 84D2 74 13 68 C0574F00",
-            "code": "B9 <option:Dai.RNG32.addr.replay_unsafe_rng> E8 [codecave:Dai.RNG32.rand_dword] EB 5A <nop:3>"
+            "code": "B9 <option:Dai.RNG32.addr.replay_safe_rng> E8 [codecave:Dai.RNG32.rand_dword] EB 5A <nop:3>"
         },
         "Dai.RNG32.rand_word.replace_inlined.2b": {
             "addr": 0x4096C0,
