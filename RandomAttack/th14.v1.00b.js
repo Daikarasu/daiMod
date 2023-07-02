@@ -80,10 +80,10 @@
             "code": "EB 3E <nop:2>"
         },
         
-        "Dai.RandomAttack.th14.unlock_extra": {
-            "addr": 0x459220,
-            "expected": "55 8BEC 51",
-            "code": "31C0 40 C3"
+        "Dai.RandomAttack.th14.unlock_all": {
+            "addr": 0x4595FF,
+            "expected": "A1 A4B64D00 8B40 0C 8348 04 02 C705 C87A4F00 01000000 33C0 C3 <int3:5>",
+            "code": "E9 [codecave:Dai.RandomAttack.th14.unlock_all.cave] A1 A4B64D00 8B40 0C 8348 04 02 C705 C87A4F00 01000000 33C0 C3"
         },
         
     },
@@ -216,6 +216,11 @@
         "Dai.RandomAttack.th14.replace_life_piece": {
             "access": "re",
             "code": "8B5D 08 56 57 83FB 04 0F85 [0x4397C0] 83EC 08 89E7 8B75 0C F30F1006 F30F5805 <codecave:Dai.RandomAttack.th14.float.24> F30F1107 F30F1046 04 F30F1147 04 6A 00 83EC 0C C74424 08 CDCC0C40 C74424 04 DB0FC9BF 57 6A 06 E8 [0x4397B0] F30F1006 F30F5C05 <codecave:Dai.RandomAttack.th14.float.24> F30F1107 6A 00 83EC 0C C74424 08 CDCC0C40 C74424 04 DB0FC9BF 57 6A 06 E8 [0x4397B0] F30F1006 F30F1107 F30F1046 04 F30F5C05 <codecave:Dai.RandomAttack.th14.float.32> F30F1147 04 6A 00 83EC 0C C74424 08 CDCC0C40 C74424 04 DB0FC9BF 57 6A 06 E8 [0x4397B0] 83C4 08 E9 [0x43995A]",
+        },
+        
+        "Dai.RandomAttack.th14.unlock_all.cave": {
+            "access": "re",
+            "code": "A1 <0x4DB68C> 81B8 46420200 11111111 75 28 81B8 4A420200 11111111 75 1C 81B8 4E420200 11111111 75 10 81B8 52420200 11111111 0F84 [0x459604] E8 [0x459300] E9 [0x459604]"
         },
         "Dai.RandomAttack.th14.float.24": {
             "access": "r",
