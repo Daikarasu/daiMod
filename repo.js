@@ -9,7 +9,7 @@
 		"kill_cam": "(th14, 15, 16, 17, 18)\n    Adds a TF2-styled kill cam to the game, which zooms in to the enemy that killed you (if it is still alive).\n    Should be fully compatible with vanilla replays!",
 		"le_sanae": "(th15) Replaces almost every single texture to LE SANAE. Viewer discretion is advised.",
 		"puny_remilia": "(th08) Makes Remilia's shottype absolutely awful. (Gastari wanted this)",
-		"th18-disable-always-on-top": "Disables Always-On-Top window behavior for Touhou 18 and 18.5"
+		"th18-disable-always-on-top": "Disables Always-On-Top window behavior for Touhou 18 onwards."
 	},
 	"servers": [
 		"https://mirrors.thpatch.net/Daikarasu/",
