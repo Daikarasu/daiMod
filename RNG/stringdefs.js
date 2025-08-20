@@ -9,5 +9,6 @@
 	"th16_scorefile_fn": "scoreth16_RNG.dat",
 	"th17_scorefile_fn": "scoreth17_RNG.dat",
     "th18_scorefile_fn": "scoreth18_RNG.dat",
+    "th20_scorefile_fn": "scoreth20_RNG.dat",
     "th125_scorefile_fn": "scoreth125_RNG.dat"
 }
